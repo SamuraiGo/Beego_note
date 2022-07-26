@@ -1,0 +1,12 @@
+## Beego orm filter
+这里的filter 不能理解为 == ，会自动忽略传入参数的空格。
+代码：
+```
+    add condition expression to QuerySeter.
+ for example:
+	//	filter by UserName == 'slene'
+		qs.Filter("UserName", "slene")
+	//	Filter("profile__Age", 28)
+	//	qs.Filter("created", time.Now())
+```
+当 UserName 为 “slene     ”，时候，也能通过校验
